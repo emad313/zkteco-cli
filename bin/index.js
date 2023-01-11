@@ -35,9 +35,7 @@ const askQuestion = async () => {
   ])
   .then((answers) => {
     if (answers.ip && answers.port && answers.api && answers.interval) {
-        setInterval(() => {
-            console.log('Sending data to API');
-        }, answers.interval);
+      interval(answers.interval);
       }
   })
   .catch((error) => {
@@ -48,4 +46,14 @@ const askQuestion = async () => {
     }
   });
 };
-askQuestion();
+// askQuestion();
+
+function interval (interval) {
+    setInterval(() => {
+    var now = new Date();
+    var currentHour = now.getHours();
+    console.log(currentHour);
+  }, interval);
+}
+
+interval(1000);
