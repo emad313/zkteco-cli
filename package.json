@@ -1,0 +1,22 @@
+{
+  "name": "zkteco-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emad Uddin (https://emad-uddin.com)",
+  "license": "MIT",
+  "bin": {
+    "zkteco": "./bin/index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "boxen": "^7.0.1",
+    "chalk": "^5.2.0",
+    "express": "^4.18.2",
+    "inquirer": "^9.1.4",
+    "yargs": "^17.6.2"
+  }
+}
