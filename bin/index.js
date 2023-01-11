@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import chalk from "chalk";
+import figlet from "figlet";
 import boxen from "boxen";
 import yargs from "yargs/yargs";
 import {hideBin} from "yargs/helpers";
@@ -10,6 +11,10 @@ const app = express();
 const port = 5000;
 
 const askQuestion = async () => {
+  // Displaying Geeks CLI
+    figlet('ZKTeco CLI', function (err, data) {
+        console.log(data);
+    });
   const answers = await inquirer
   .prompt([
     {
@@ -52,8 +57,10 @@ function interval (interval) {
     setInterval(() => {
     var now = new Date();
     var currentHour = now.getHours();
-    console.log(currentHour);
+    var currentMinute = now.getMinutes();
+    var currentSecond = now.getSeconds();
+    console.log(currentHour + ":" + currentMinute + ":" + currentSecond);
   }, interval);
 }
-
+console.log(chalk.green('Server is running'));
 interval(1000);
