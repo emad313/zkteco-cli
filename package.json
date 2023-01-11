@@ -9,8 +9,8 @@
   "author": "Emad Uddin (https://emad-uddin.com)",
   "license": "MIT",
   "bin": {
-    "zkteco": "./bin/index.js",
-    "zktecoserver": "./bin/server.js"
+    "zkteco": "./bin/index",
+    "zktecoserver": "./bin/server"
   },
   "type": "module",
   "dependencies": {

@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
-import chalk from "chalk";
-import figlet from "figlet";
-import boxen from "boxen";
-import yargs from "yargs/yargs";
-import {hideBin} from "yargs/helpers";
-import inquirer from "inquirer";
-import express from "express";
+import chalk from 'chalk';
+import figlet from 'figlet';
+import boxen from 'boxen';
+import yargs from 'yargs/yargs';
+import { hideBin } from 'yargs/helpers';
+import inquirer from 'inquirer';
+import express from 'express';
+
 const app = express();
 const port = 5000;
 
@@ -15,8 +16,7 @@ const askQuestion = async () => {
     figlet('ZKTeco CLI', function (err, data) {
         console.log(data);
     });
-  const answers = await inquirer
-  .prompt([
+  const answers = await inquirer.prompt([
     {
         type: 'String',
         name: 'ip',
@@ -51,6 +51,9 @@ const askQuestion = async () => {
     }
   });
 };
+figlet('ZKTeco CLI', function (err, data) {
+  console.log(data);
+});
 // askQuestion();
 
 function interval (interval) {
